@@ -1,12 +1,7 @@
 <?php
 /**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
+ * Template Name: Two Collumn Page
+ * Template Description: A two collumn page with a fixed sidebar.
  * @package Business Starter
  */
 
@@ -14,7 +9,7 @@ get_header(); ?>
 
 	<?php the_field( "jumbotron_content" ); ?>
 
-	<div id="primary" class="content-area container">
+	<div id="primary" class="content-area container two-collumn">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -26,4 +21,5 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

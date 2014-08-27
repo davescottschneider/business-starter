@@ -85,6 +85,38 @@ function business_starter_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	// Area 3, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'First Footer Widget Area', 'business-starter' ),
+		'id' => 'first-footer-widget-area',
+		'description' => __( 'An optional widget area for your site footer.', 'business-starter' ),
+		'before_widget' => '<div class="well">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 4, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'Second Footer Widget Area', 'business-starter' ),
+		'id' => 'second-footer-widget-area',
+		'description' => __( 'An optional widget area for your site footer.', 'business-starter' ),
+		'before_widget' => '<div class="well">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 5, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'Third Footer Widget Area', 'business-starter' ),
+		'id' => 'third-footer-widget-area',
+		'description' => __( 'An optional widget area for your site footer.', 'business-starter' ),
+		'before_widget' => '<div class="well">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 add_action( 'widgets_init', 'business_starter_widgets_init' );
 

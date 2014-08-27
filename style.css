@@ -660,21 +660,18 @@ object {
 /*--------------------------------------------------------------
 13.0 Layout
 --------------------------------------------------------------*/
-.content-area {
+.two-collumn .content-area {
   float: left;
   margin: 0 -25% 0 0;
   width: 100%; }
-
-.site-main {
+.two-collumn .site-main {
   margin: 0 25% 0 0; }
-
-.site-content .widget-area {
+.two-collumn .site-content .widget-area {
   right: 0;
   overflow: hidden;
   width: 25%;
   position: fixed; }
-
-.site-footer {
+.two-collumn .site-footer {
   clear: both;
   width: 100%; }
 
