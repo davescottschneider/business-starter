@@ -71,6 +71,26 @@ endif; // business_starter_setup
 add_action( 'after_setup_theme', 'business_starter_setup' );
 
 /**
+ * Using theme customizer to add support for uploadable logos.
+ */
+function business_starter_theme_customizer( $wp_customize ) {
+
+$wp_customize->add_section( 'business_starter_logo_section' , array(
+    'title'       => __( 'Logo', 'business_starter' ),
+    'priority'    => 30,
+    'description' => 'Upload a logo to replace the default site name and description in the header',
+) );
+$wp_customize->add_setting( 'business_starter_logo' );
+
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'business_starter_logo', array(
+    'label'    => __( 'Logo', 'business_starter' ),
+    'section'  => 'business_starter_logo_section',
+    'settings' => 'business_starter_logo',
+) ) );
+}
+add_action('customize_register', 'business_starter_theme_customizer');
+
+/**
  * Register widget area.
  *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
@@ -116,6 +136,24 @@ function business_starter_widgets_init() {
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Header Script Includes', 'business-starter' ),
+		'id' => 'header-widget-area',
+		'description' => __( 'Only use this widget for adding scripts to the header.', 'business-starter' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Footer Script Includes', 'business-starter' ),
+		'id' => 'fourth-footer-widget-area',
+		'description' => __( 'Only use this widget for adding scripts to the footer.', 'business-starter' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
 	) );
 }
 add_action( 'widgets_init', 'business_starter_widgets_init' );

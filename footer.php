@@ -42,6 +42,9 @@
 						<?php dynamic_sidebar( 'third-footer-widget-area' ); ?>
 				</div><!-- #third .widget-area -->
 <?php endif; ?>
+<?php if ( is_active_sidebar( 'fourth-footer-widget-area' ) ) : ?>
+						<?php dynamic_sidebar( 'fourth-footer-widget-area' ); ?>
+<?php endif; ?>
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

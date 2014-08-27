@@ -121,6 +121,8 @@ and Blueprint http://www.blueprintcss.org/
 	width:100%;
 	top:0;
 	height:100px;
+	background-color:rgba(255,255,255,0.9);
+	z-index:100;
 }
 #content{
 	margin-top:100px;
@@ -132,4 +134,7 @@ display:none;
 	width:300px;
 	float:left;
 	display:block;
+}
+.site-footer{
+	padding:20px;
 }
